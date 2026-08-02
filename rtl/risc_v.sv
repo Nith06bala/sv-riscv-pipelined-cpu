@@ -66,89 +66,90 @@ pc<=pc;
 end
 always_ff@(posedge clk)begin//inst_mem
 
-// 32'h002081B3
-inst_mem[0] = 8'b00000000;
-inst_mem[1] = 8'b00100000;
-inst_mem[2] = 8'b10000001;
-inst_mem[3] = 8'b10110011; //add x3, x1, x2
+// add x3,x1,x2
+inst_mem[0] = 8'hB3;
+inst_mem[1] = 8'h81;
+inst_mem[2] = 8'h20;
+inst_mem[3] = 8'h00;
 
-// 32'h40118233
-inst_mem[4] = 8'b01000000;
-inst_mem[5] = 8'b00010001;
-inst_mem[6] = 8'b10000010;
-inst_mem[7] = 8'b00110011; //sub x4, x3, x1
+// sub x4,x3,x1
+inst_mem[4] = 8'h33;
+inst_mem[5] = 8'h82;
+inst_mem[6] = 8'h11;
+inst_mem[7] = 8'h40;
 
-// 32'h003202B3
-inst_mem[8] = 8'b00000000;
-inst_mem[9] = 8'b00110010;
-inst_mem[10] = 8'b00000010;
-inst_mem[11] = 8'b10110011; //add x5, x4, x3
+// add x5,x4,x3
+inst_mem[8]  = 8'hB3;
+inst_mem[9]  = 8'h02;
+inst_mem[10] = 8'h32;
+inst_mem[11] = 8'h00;
 
-// 32'h0000A303
-inst_mem[12] = 8'b00000000;
-inst_mem[13] = 8'b00000000;
-inst_mem[14] = 8'b10100011;
-inst_mem[15] = 8'b00000011; //lw x6, 0(x1)
+// lw x6,0(x1)
+inst_mem[12] = 8'h03;
+inst_mem[13] = 8'hA3;
+inst_mem[14] = 8'h00;
+inst_mem[15] = 8'h00;
 
-// 32'h005303B3
-inst_mem[16] = 8'b00000000;
-inst_mem[17] = 8'b01010011;
-inst_mem[18] = 8'b00000011;
-inst_mem[19] = 8'b10110011; //add x7, x6, x5
+// add x7,x6,x5
+inst_mem[16] = 8'hB3;
+inst_mem[17] = 8'h03;
+inst_mem[18] = 8'h53;
+inst_mem[19] = 8'h00;
 
-inst_mem[20] = 8'b00000000;
-inst_mem[21] = 8'b01110000;
-inst_mem[22] = 8'b10100010;
-inst_mem[23] = 8'b00100011; //sw x7, 4(x1)
+// sw x7,4(x1)
+inst_mem[20] = 8'h23;
+inst_mem[21] = 8'hA2;
+inst_mem[22] = 8'h70;
+inst_mem[23] = 8'h00;
 
-// 32'h0040A403
-inst_mem[24] = 8'b00000000;
-inst_mem[25] = 8'b01000000;
-inst_mem[26] = 8'b10100100;
-inst_mem[27] = 8'b00000011;//lw x8, 4(x1)
+// lw x8,4(x1)
+inst_mem[24] = 8'h03;
+inst_mem[25] = 8'hA4;
+inst_mem[26] = 8'h40;
+inst_mem[27] = 8'h00;
 
-// 32'h00208033
-inst_mem[28] = 8'b00000000;
-inst_mem[29] = 8'b00100000;
-inst_mem[30] = 8'b10000000;
-inst_mem[31] = 8'b00110011;//add x0, x1, x2
+// add x0,x1,x2
+inst_mem[28] = 8'h33;
+inst_mem[29] = 8'h80;
+inst_mem[30] = 8'h20;
+inst_mem[31] = 8'h00;
 
-// 32'h001004B3
-inst_mem[32] = 8'b00000000;
-inst_mem[33] = 8'b00010000;
-inst_mem[34] = 8'b00000100;
-inst_mem[35] = 8'b10110011;//add x9, x0, x1
+// add x9,x0,x1
+inst_mem[32] = 8'hB3;
+inst_mem[33] = 8'h04;
+inst_mem[34] = 8'h10;
+inst_mem[35] = 8'h00;
 
-// 32'h00208463
-inst_mem[36] = 8'b00000000;
-inst_mem[37] = 8'b00100000;
-inst_mem[38] = 8'b10000100;
-inst_mem[39] = 8'b01100011;//beq x1, x2, +8
+// beq x1,x2,+8
+inst_mem[36] = 8'h63;
+inst_mem[37] = 8'h84;
+inst_mem[38] = 8'h20;
+inst_mem[39] = 8'h00;
 
-// 32'h00108463
-inst_mem[40] = 8'b00000000;
-inst_mem[41] = 8'b00010000;
-inst_mem[42] = 8'b10000100;
-inst_mem[43] = 8'b01100011; //beq x1, x1, +8
+// beq x1,x1,+8
+inst_mem[40] = 8'h63;
+inst_mem[41] = 8'h84;
+inst_mem[42] = 8'h10;
+inst_mem[43] = 8'h00;
 
-// 32'h00A50533
-inst_mem[44] = 8'b00000000;
-inst_mem[45] = 8'b10100101;
-inst_mem[46] = 8'b00000101;
-inst_mem[47] = 8'b00110011;//add x10, x10, x10
+// add x10,x10,x10
+inst_mem[44] = 8'h33;
+inst_mem[45] = 8'h05;
+inst_mem[46] = 8'hA5;
+inst_mem[47] = 8'h00;
 
-// 32'h008385B3
-inst_mem[48] = 8'b00000000;
-inst_mem[49] = 8'b10000011;
-inst_mem[50] = 8'b10000101;
-inst_mem[51] = 8'b10110011;//add x11, x7, x8
+// add x11,x7,x8
+inst_mem[48] = 8'hB3;
+inst_mem[49] = 8'h85;
+inst_mem[50] = 8'h83;
+inst_mem[51] = 8'h00;
 
 
 end
 
 always_comb begin
 case(psel)
-1'b0:id_inst=({inst_mem[pc],inst_mem[pc+1],inst_mem[pc+2],inst_mem[pc+3]});
+1'b0:id_inst=({inst_mem[pc+3],inst_mem[pc+2],inst_mem[pc+1],inst_mem[pc]});
 1'b1:id_inst=32'b0;
 endcase
 end
