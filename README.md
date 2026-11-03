@@ -13,3 +13,5 @@ Basic branch support
 Since it is not supporting bit level manipulation a whole 32 bit of data memory is used preffered over byte addressing
 
 supported instruction sets add,sub,and,or,addi,lw,sw,beq
+
+For detailed report refer RISCV_Documentaion.pdf in docs folder
