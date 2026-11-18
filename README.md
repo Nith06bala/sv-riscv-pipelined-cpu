@@ -94,6 +94,4 @@ The full report, with waveform screenshots and timestamp-by-timestamp explanatio
 
 - Add SystemVerilog Assertions for the forwarding, stall and flush logic
 
-## Author
-
-Nithish Kanna B, B.Tech (VLSI Design Technology), SASTRA Deemed University
+Nithish Kanna B
