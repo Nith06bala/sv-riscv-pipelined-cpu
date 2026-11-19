@@ -54,7 +54,7 @@ SystemVerilog Assertions (SVA) are planned but not yet implemented.
 
 ## Documentation
 
-The full report, with waveform screenshots and timestamp-by-timestamp explanations of forwarding, hazard detection, branching and the zero register, is in [`docs/RISCV_Documentation.pdf`](docs/RISCV_Documentation.pdf).
+The full report, with waveform screenshots and timestamp-by-timestamp explanations of forwarding, hazard detection, branching and the zero register, is in [docs/RISCV_Documentation.pdf](docs/RISCV_Documentation.pdf).
 
 ## How to Simulate
 
