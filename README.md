@@ -15,20 +15,20 @@ A 32-bit, 5-stage pipelined RISC-V processor written in SystemVerilog. It suppor
 
 ## Supported Instructions
 
-| Type | Instructions | Description |
+ Type | Instructions | Description |
 |------|--------------|-------------|
-| R-type | `ADD`, `SUB`, `AND`, `OR` | Operate on two source registers |
-| I-type | `ADDI` | Register plus sign-extended immediate |
-| Load | `LW` | Load a 32-bit word from data memory |
-| Store | `SW` | Store a 32-bit word to data memory |
-| Branch | `BEQ` | Branch if two registers are equal |
+| R-type | ADD , SUB , AND , OR | Operate on two source registers |
+| I-type | ADDI | Register plus sign-extended immediate |
+| Load | LW | Load a 32-bit word from data memory |
+| Store | SW | Store a 32-bit word to data memory |
+| Branch | BEQ | Branch if two registers are equal |
 
 
 
 
 ## Design Notes
 
-- **Memory:** Instruction memory is little-endian. Data memory is word-addressed: the computed address indexes a full 32-bit word, and byte or halfword access (`LB`, `SB`, and similar) is not supported.
+- **Memory:** Instruction memory is little-endian. Data memory is word-addressed: the computed address indexes a full 32-bit word, and byte or halfword access (LB, SB, and similar) is not supported.
 
 
 ## Results
